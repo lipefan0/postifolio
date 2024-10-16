@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="transition-colors duration-300">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='/css/styles.css') }}"
+    />
+    <title>Meus Projetos</title>
+  </head>
+  <body
+    class="bg-[var(--bg-color)] text-[var(--text-color)] transition-colors duration-300"
+  >
+    <!-- Navbar -->
+    <header>
+      <nav
+        class="p-5 bg-[var(--bg-color)] flex justify-between items-center shadow-lg"
+      >
+        <!-- Espaço vazio à esquerda para balancear -->
+        <div class="flex-shrink-0 w-16"></div>
+        <!-- Elemento vazio com largura fixa -->
+
+        <!-- Navbar centralizada -->
+        <div class="flex justify-center">
+          <ul class="flex space-x-4">
+            <li>
+              <a href="/" class="text-[var(--text-color)] hover:underline"
+                >Home</a
+              >
+            </li>
+            <li>
+              <a
+                href="/projects"
+                class="text-[var(--text-color)] hover:underline"
+                >Projetos</a
+              >
+            </li>
+            <li>
+              <a
+                href="/contact"
+                class="text-[var(--text-color)] hover:underline"
+                >Contatos</a
+              >
+            </li>
+          </ul>
+        </div>
+
+        <!-- Botão de alternância de tema à direita -->
+        <div class="flex-shrink-0">
+          <button
+            id="theme-toggle"
+            class="bg-[var(--text-color)] text-[var(--bg-color)] p-2 rounded focus:outline-none transition-colors duration-300"
+          >
+            Mudar Tema
+          </button>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <section>
+        <div>oi</div>
+      </section>
+    </main>
+
+    <footer>
+      <div
+        class="p-5 bg-[var(--bg-color)] text-[var(--text-color)] text-center"
+      >
+        &copy; 2024 Felipe. Todos os direitos reservados.
+      </div>
+    </footer>
+
+    <script src="{{ url_for('static', filename='/javascript/tema.js') }}"></script>
+  </body>
+</html>

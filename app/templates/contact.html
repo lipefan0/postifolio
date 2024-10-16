@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="transition-colors duration-300">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='/css/styles.css') }}"
+    />
+    <title>Fale Comigo</title>
+  </head>
+  <body
+    class="bg-[var(--bg-color)] text-[var(--text-color)] transition-colors duration-300"
+  >
+    <!-- Navbar -->
+    <header>
+      <nav
+        class="p-5 bg-[var(--bg-color)] flex justify-between items-center shadow-lg"
+      >
+        <!-- Espaço vazio à esquerda para balancear -->
+        <div class="flex-shrink-0 w-16"></div>
+        <!-- Elemento vazio com largura fixa -->
+
+        <!-- Navbar centralizada -->
+        <div class="flex justify-center">
+          <ul class="flex space-x-4">
+            <li>
+              <a href="/" class="text-[var(--text-color)] hover:underline"
+                >Home</a
+              >
+            </li>
+            <li>
+              <a
+                href="/projects"
+                class="text-[var(--text-color)] hover:underline"
+                >Projetos</a
+              >
+            </li>
+            <li>
+              <a
+                href="/contact"
+                class="text-[var(--text-color)] hover:underline"
+                >Contatos</a
+              >
+            </li>
+          </ul>
+        </div>
+
+        <!-- Botão de alternância de tema à direita -->
+        <div class="flex-shrink-0">
+          <button
+            id="theme-toggle"
+            class="bg-[var(--text-color)] text-[var(--bg-color)] p-2 rounded focus:outline-none transition-colors duration-300"
+          >
+            Mudar Tema
+          </button>
+        </div>
+      </nav>
+    </header>
+
+    <main class="w-[600px] mx-auto">
+      <section>
+        <div>
+          <form class="flex gap-2 flex-wrap" action="contact-form">
+            <label for="name">Nome</label>
+            <input type="text" id="name" name="name" required />
+
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required />
+
+            <label for="message">Mensagem</label>
+            <textarea id="message" name="message" required></textarea>
+
+            <button type="submit">Enviar</button>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div
+        class="p-5 bg-[var(--bg-color)] text-[var(--text-color)] text-center"
+      >
+        &copy; 2024 Felipe. Todos os direitos reservados.
+      </div>
+    </footer>
+
+    <script src="{{ url_for('static', filename='/javascript/tema.js') }}"></script>
+    <script src="{{ url_for('static', filename='/javascript/email.js') }}"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  </body>
+</html>

@@ -1,0 +1,13 @@
+/* Define estilos diferentes para o tema claro e escuro */
+.light {
+  --bg-color: white;
+  --text-color: black;
+  --card-color: #f8f9fa;
+  --card-color-hover: #eaedf0;
+}
+.dark {
+  --bg-color: #1a202c; /* cor escura */
+  --text-color: white;
+  --card-color: #131923; /* cor de fundo dos cards */
+  --card-color-hover: #1e232d; /* cor de fundo dos cards ao passar o mouse */
+}
