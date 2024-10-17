@@ -84,8 +84,8 @@
         <ul class="grid grid-cols-2 gap-y-8 mt-5">
           {% for project in projects %}
           <li class="flex rounded-sm justify-around items-center">
-              <a href="{{ project.github }}" class="text-blue-500">
-                  <div class="shadow-lg bg-[var(--card-color)]  w-[250px] p-4 rounded-md flex flex-col gap-2 justify-between items-center hover:bg-[var(--card-color-hover)] hover:transition-all hover:w-72 duration-200">
+              <a target="_blank" href="{{ project.github }}" class="text-blue-500">
+                  <div class="shadow-lg bg-[var(--card-color)] w-[250px] p-4 rounded-md flex flex-col gap-2 justify-between items-center hover:bg-[var(--card-color-hover)] hover:transition-all hover:w-72 duration-200">
                       <img class="p-1" src="{{ url_for('static', filename=project.image) }}" alt="{{ project.name }}">
                       <span class="text-center text-[var(--text-color)]">{{ project.name }}</span>
                   </div>
