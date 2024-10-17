@@ -3,7 +3,8 @@
   emailjs.init('ghsQxeOnMzQjby9yi'); // Substitua pelo seu User ID
 })();
 
-window.onload = function() {
+// Substituindo window.onload por DOMContentLoaded
+document.addEventListener('DOMContentLoaded', function() {
   document.getElementById('contact-form').addEventListener('submit', function(event) {
     event.preventDefault();
 
@@ -19,4 +20,4 @@ window.onload = function() {
       alert('Falha ao enviar a mensagem.');
     });
   });
-}
+});
