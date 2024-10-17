@@ -1,13 +1,24 @@
 /* Define estilos diferentes para o tema claro e escuro */
 .light {
-  --bg-color: white;
+  --bg-color: #eaedf0; /* cor clara forte */
+  --form-bg-color: #ffffff; /* cor clara fraca */
   --text-color: black;
   --card-color: #f8f9fa;
-  --card-color-hover: #eaedf0;
+  --card-color-hover: #ffffff;
+  --bg-textarea: #f8f9fa;
+  --text-textarea: black;
 }
 .dark {
-  --bg-color: #1a202c; /* cor escura */
+  --bg-color: #1a202c; /* cor escura forte */
+  --form-bg-color: #242c3b; /* cor escura fraca */
   --text-color: white;
   --card-color: #131923; /* cor de fundo dos cards */
   --card-color-hover: #1e232d; /* cor de fundo dos cards ao passar o mouse */
+  --bg-textarea: #f8f9fa; /* cor de fundo do textarea */
+  --text-textarea: black; /* cor do texto do textarea */
+}
+
+label {
+  font-weight: normal;
+  color: var(--text-color)
 }

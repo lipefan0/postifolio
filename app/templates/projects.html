@@ -59,9 +59,31 @@
       </nav>
     </header>
 
-    <main>
+    <main class="max-w-[600px] px-4 mx-auto my-5">
       <section>
-        <div>oi</div>
+        <h1 class="text-2xl font-bold mt-10">Projetos no github</h1>
+      </section>
+      <section>
+        <ul class="grid grid-cols-2 gap-y-8 mt-5">
+          {% for project in projects %}
+          <li class="flex rounded-sm justify-around items-center">
+            <a href="{{ project.github }}" class="text-blue-500">
+              <div
+                class="shadow-lg bg-[var(--card-color)] w-[250px] p-4 rounded-md flex flex-col gap-2 justify-between items-center hover:bg-[var(--card-color-hover)] hover:transition-all hover:w-72 duration-200"
+              >
+                <img
+                  class="p-1"
+                  src="{{ url_for('static', filename=project.image) }}"
+                  alt="{{ project.name }}"
+                />
+                <span class="text-center text-[var(--text-color)]"
+                  >{{ project.name }}</span
+                >
+              </div>
+            </a>
+          </li>
+          {% endfor %}
+        </ul>
       </section>
     </main>
 
