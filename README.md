@@ -1,4 +1,4 @@
-# Portfólio de Felipe Cardoso
+# Portfólio de Felipe Fernandes
 
 Este é o repositório do meu portfólio pessoal, desenvolvido com Flask e apresentando meus projetos e habilidades como desenvolvedor.
 
