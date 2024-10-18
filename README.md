@@ -1,66 +1,102 @@
-# Meu Portfólio Pessoal
+# Portfólio de Felipe Cardoso
 
-Este é um projeto de portfólio pessoal desenvolvido utilizando Flask, HTML, CSS e JavaScript.
+Este é o repositório do meu portfólio pessoal, desenvolvido com Flask e apresentando meus projetos e habilidades como desenvolvedor.
 
-## Estrutura do Projeto
+## 🚀 Tecnologias Utilizadas
+
+- Python 3.12
+- Flask 2.3.3
+- HTML5
+- CSS3
+- JavaScript
+- Tailwind CSS
+
+## 📁 Estrutura do Projeto
 
 ```
-app/
-├── api/
-│   ├── __init__.py
-│   └── app.py
-├── controllers/
-├── models/
-├── static/
-│   ├── css/
-│   ├── img/
-│   └── javascript/
-│       ├── email.js
-│       └── tema.js
-├── templates/
-│   ├── __init__.py
-│   ├── contact.html
-│   ├── index.html
-│   └── projects.html
-├── views/
-│   ├── __init__.py
+portifolio/
+├── app/
+│   ├── api/
+│   │   └── app.py
+│   ├── static/
+│   │   ├── css/
+│   │   ├── img/
+│   │   └── javascript/
+│   │       ├── email.js
+│   │       └── tema.js
+│   ├── templates/
+│   │   ├── contact.html
+│   │   ├── index.html
+│   │   └── projects.html
+│   ├── views/
+│   │   └── main_views.py
 │   └── data.py
 ├── .gitignore
 ├── config.py
 ├── README.md
 ├── run.py
-└── tailwind.config.js (apenas para IntelliSense)
+└── tailwind.config.js
 ```
 
-## Funcionalidades
+## 🛠️ Funcionalidades
 
-- Utiliza Flask para gerenciamento de rotas e renderização de templates
-- Implementa `render_template` para renderizar os arquivos HTML
-- Usa um arquivo `data.json` para armazenar dados utilizados nos templates
-- Implementa funções Jinja nos templates HTML para recuperar dados do backend
-- Exibe imagens, skills, links e outras informações dinâmicas
+- **Página Inicial**: Apresenta uma breve introdução e destaca minhas habilidades principais.
+- **Projetos**: Exibe uma lista dos meus projetos mais relevantes, com descrições e links.
+- **Contato**: Formulário de contato para mensagens diretas.
+- **Tema Escuro/Claro**: Alternância entre temas para melhor experiência do usuário.
 
-## Tecnologias Utilizadas
+## 🔧 Como Executar
 
-- Python (Flask)
-- HTML
-- CSS (Com Tailwind CSS)
-- JavaScript
+1. Clone o repositório:
+   ```
+   git clone https://github.com/lipefan0/portifolio.git
+   ```
+2. Navegue até o diretório do projeto:
+   ```
+   cd portifolio
+   ```
+3. Instale as dependências:
+   ```
+   pip install -r requirements.txt
+   ```
+4. Execute o aplicativo:
+   ```
+   python run.py
+   ```
+5. Acesse `http://localhost:5000` no seu navegador.
 
-## Como Executar
+## 📊 Dados Dinâmicos
 
-1. Clone o repositório
-2. Instale as dependências: `pip install -r requirements.txt`
-3. Execute o arquivo `run.py`: `python run.py`
+Os dados exibidos no portfólio são gerenciados através do arquivo `data.py` na pasta `app`. Isso permite uma fácil atualização e manutenção das informações exibidas, incluindo habilidades e projetos.
 
-## Funcionalidades Futuras
+## 🎨 Estilização
 
-Algumas pastas ainda não têm funcionalidades implementadas, mas estão planejadas para atualizações futuras:
+O projeto utiliza Tailwind CSS para estilização, proporcionando um design responsivo e moderno.
 
-- views
-- models
-- controllers
+## 📧 Funcionalidade de E-mail
 
-## Contribuição
+O arquivo `email.js` na pasta `static/javascript` gerencia a funcionalidade de envio de e-mails através do formulário de contato.
 
-Sinta-se à vontade para contribuir com o projeto. Abra uma issue ou envie um pull request com suas sugestões.
+## 🌓 Tema Escuro/Claro
+
+A alternância entre temas escuro e claro é controlada pelo arquivo `tema.js` na pasta `static/javascript`, oferecendo uma experiência de usuário personalizável.
+
+## 🔮 Desenvolvimentos Futuros
+
+- Implementação de um blog integrado
+- Adição de uma seção de depoimentos
+- Integração com API do GitHub para exibição automática de projetos
+
+## 🤝 Contribuições
+
+Contribuições, problemas e solicitações de recursos são bem-vindos. Sinta-se à vontade para verificar a página de issues se quiser contribuir.
+
+## 📄 Licença
+
+Este projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE) para mais detalhes.
+
+## 📞 Contato
+
+Felipe Fernandes - [Linkedin](https://www.linkedin.com/in/)
+
+Link do Projeto: [https://github.com/lipefan0/portifolio](https://github.com/lipefan0/portifolio)
