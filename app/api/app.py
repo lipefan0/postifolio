@@ -1,23 +1,12 @@
-from flask import Flask, render_template
+from flask import Flask
+from app.views.main_views import main
 import os
-from app.data import skills, projects as project_list 
 
-app = Flask(__name__, template_folder=os.path.join('..', 'templates')
-, static_folder=os.path.join('..', 'static'))
+template_dir = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', 'templates'))
+static_dir = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', 'static'))
 
-@app.route('/', methods=['GET'])
-def home():
-    return render_template('index.html', skills=skills, projects=project_list)
+app = Flask(__name__, template_folder=template_dir, static_folder=static_dir)
+app.register_blueprint(main)
 
-@app.route('/projects', methods=['GET'])
-def show_projects():  # Renomeie a função aqui
-    return render_template('projects.html', projects=project_list)
-
-@app.route('/contact', methods=['GET'])
-def contact():
-    return render_template('contact.html')
-
-@app.route('/contato', methods=['GET'])
-def contato():
-    return render_template('contato.html')
-
+if __name__ == '__main__':
+    app.run(debug=True)

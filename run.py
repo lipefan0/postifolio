@@ -1,6 +1,4 @@
-import app.api.app as app
-
-app = app.app
+from app.api.app import app
 
 if __name__ == '__main__':
     app.run(debug=True, port=5001)
